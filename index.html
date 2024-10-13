@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //1. How do you create an empty array in JavaScript?
+      const arr1 = [""];
+      console.log(arr1);
+
+      //2.How do you access the first and last elements of an array?
+      const arr2 = [10, 20, 30, 40, 50];
+      let first = arr2[0];
+      console.log(`First element is ${first}`);
+      let last = arr2[arr2.length - 1];
+      console.log(`Last element is ${last}`);
+
+      //3. How do you add an element to the end of an array?
+      let arr3 = [1, 3, 5, 7, 9];
+      arr3.push(2);
+      console.log(arr3);
+
+      //4.How do you remove the last element from an array?
+      let arr4 = [2, 4, 6, 8, 10];
+      arr4.pop();
+      console.log(arr4);
+
+      //5.How do you loop through an array in JavaScript?
+      let arr5 = [11, 22, 33, 44, 55];
+      for (let i = 0; i <= arr5.length; i++) {
+        console.log(arr5[i]);
+      }
+
+      //6.How do you check if an element exists in an array?
+      let arr6 = [5, 4, 6, 23, 7, 88];
+      if (arr6.includes(30)) {
+        console.log("the element exist in an arry");
+      } else {
+        console.log("the element does not exist in an arry");
+      }
+
+      //7. How do you remove an element from an array at a specific index?
+      let arr7 = [21, 32, 43, 54, 65, 76];
+      arr7.splice(4, 1);
+      console.log(arr7);
+
+      //8. How do you concatenate two arrays in JavaScript?
+      let arr8 = ["hello"];
+      let x = ["world"];
+      console.log(arr8.concat(x));
+
+      //9.  Write a function to flatten a nested array in JavaScript.
+
+      //10. What does the reduce() method do in the flattenArray() function above?
+
+      //11. Can you give an example of a nested array that the flattenArray() function would be able to flatten?
+           let arr11= [87,54,34,[23,24,43,[23,3]],2]
+           
+      //12.Can you explain how the flat() method can be used to flatten an array in JavaScript?
+      let arr12 = [1, 2, [3, 4, [5, 6]], 7];
+      console.log(arr12.flat());
+
+      //13. What are some potential issues to watch out for when flattening arrays in JavaScript?
+
+      //14.  What is the difference between .map() and .forEach()?
+      //map()
+      let a = [1, 2, 3, 4, 5, 6, 7];
+      a = a.map((val) => {
+        return val + 1;
+      });
+      console.log(a);
+
+      //forEach()
+      let b = [12, 23, 11, 34, 56, 98];
+      b.forEach(
+        (e = (value, index) => {
+          console.log("the value is " + value);
+          console.log("the index is " + index);
+        })
+      );
+
+      //15.  How do you remove an element from an array in JavaScript?
+      let arr15 = [1, 2, 3, 4, 5, 6, 4, 3];
+      delete arr15[4];
+      console.log(arr15);
+
+      //16. What is the difference between .filter() and .find()?
+      //filter()
+      let filtArr = [13, 63, 23, 10, 23];
+      function adult(age) {
+          return age >= 18;
+        }
+        console.log(filtArr.filter(adult));
+
+      //find()
+      let findArr = [32,12,32,43,54,11];
+      console.log(findArr.find(x => x === 54));
+      
+
+      //17. How do you sort an array in JavaScript?
+      let arr17 = [21, 54, 12, 43, 51, 82, 22];
+      console.log(arr17.sort());
+
+      //18.  How do you flatten a nested array in JavaScript?
+      let arr18 = [1, 2, 3, [4, 5, [6, 7], 8]];
+      console.log(arr18.flat());
+    </script>
+  </body>
+</html>
